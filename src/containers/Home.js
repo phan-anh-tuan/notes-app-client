@@ -13,11 +13,13 @@ export default class Home extends Component {
     }
 
     componentDidMount = async () => {
-        try {
-            const notes = await this.notes()
-            this.setState({ notes })
-        } catch (error) {
-            alert(error.message)
+        if (this.props.isAuthenticated) {
+            try {
+                const notes = await this.notes()
+                this.setState({ notes })
+            } catch (error) {
+                alert(error.message)
+            }
         }
         this.setState({ isLoading: false })
     }
