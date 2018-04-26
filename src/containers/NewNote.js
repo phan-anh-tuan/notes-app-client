@@ -43,7 +43,7 @@ class NewNote extends React.Component {
         })
 
         try {
-            const attachment = await s3Upload(this.file)
+            const attachment = this.file ? await s3Upload(this.file): null
 
             await this.createNote({
                 content: this.state.content,
