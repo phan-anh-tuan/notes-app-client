@@ -31,7 +31,6 @@ export default class Login extends Component {
             this.setState({ isLoading: true })
             await Auth.signIn(this.state.email, this.state.password)
             this.props.userHasAuthenticated(true)
-            this.props.history.push('/')
         } catch (error) {
             alert(error.message)
             this.setState({ isLoading: false })

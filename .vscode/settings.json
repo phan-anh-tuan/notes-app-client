@@ -2,5 +2,6 @@
     "files.associations": {
         "**/containers/*.js": "javascriptreact",
         "**/components/*.js": "javascriptreact",
+        "**/libs/*.js": "javascriptreact",
     },
 }
